@@ -1,0 +1,36 @@
+allprojects {
+
+    group = 'org.apache.rocketmq'
+    version = '4.4.0-SNAPSHOT'
+
+
+    apply plugin: 'java'
+    apply plugin: 'eclipse'
+
+
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
+
+    eclipse {
+        classpath {
+            downloadJavadoc = true
+            downloadSources = true
+        }
+    }
+
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    repositories{
+        maven { url "http://repo.bt/repository/maven-public/" }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        mavenCentral()
+    }
+
+    configurations.all {
+        resolutionStrategy.cacheChangingModulesFor 0, 'seconds' // 每隔0秒
+        resolutionStrategy.cacheDynamicVersionsFor 0, 'seconds' // 采用动态版本声明的依赖缓存0秒
+    }
+
+}

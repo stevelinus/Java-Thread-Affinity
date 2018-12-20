@@ -1,0 +1,14 @@
+dependencies {
+    compile 'net.openhft:affinity:3.1.12-SNAPSHOT'
+    testCompile 'javax.inject:javax.inject:1'
+    testCompile 'org.osgi:org.osgi.core:6.0.0'
+    testCompile 'org.osgi:org.osgi.compendium:5.0.0'
+    testCompile 'org.ops4j.pax.exam:pax-exam-container-native:4.8.0'
+    testCompile 'org.ops4j.pax.exam:pax-exam-junit4:4.8.0'
+    testCompile 'org.ops4j.pax.exam:pax-exam-link-mvn:4.8.0'
+    testCompile 'org.ops4j.pax.url:pax-url-aether:2.4.5'
+    testCompile 'org.ops4j.pax.url:pax-url-reference:2.4.5'
+    testCompile 'org.apache.felix:org.apache.felix.framework:5.4.0'
+    testCompile 'org.slf4j:slf4j-api:1.7.25'
+    testCompile 'org.slf4j:slf4j-simple:1.7.25'
+}
